@@ -1,0 +1,1351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>NutriBag</title>
+
+    <!-- favicon -->
+    <link href="img/favicon.png" type="image/png" rel="icon">
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body>
+
+    <!-- header_section start -->
+    <header class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg p-0">
+                <a class="navbar-brand m-0 p-0" href="index.html">
+                    <img src="img/logo.svg" alt="" class="logo">
+                    <img src="img/logo-icon.svg" alt="" class="logo_icon">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <img src="img/hamburgar.png">
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="dropdown">
+                            <a href="crops.html">Crops</a>
+                            <a href="#" class="arrow" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a href="vegetables.html"><img src="img/crops-icon-1.svg" alt=""> Vegetables</a>
+                                </li>
+                                <li><a href="#"><img src="img/crops-icon-2.svg" alt=""> Soft fruit</a></li>
+                                <li><a href="#"><img src="img/crops-icon-3.svg" alt=""> Orchards</a></li>
+                                <li><a href="vineyards.html"><img src="img/crops-icon-4.svg" alt=""> Vineyards</a></li>
+                                <li><a href="#"><img src="img/crops-icon-5.svg" alt=""> Nurseries</a></li>
+                                <li><a href="forestry.html"><img src="img/crops-icon-6.svg" alt="" class="foresty_icon">
+                                        Forestry</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="partners.html">For Partners</a>
+                            <a href="#" class="arrow" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu partner_dropdown" aria-labelledby="dropdownMenuLink">
+                                <li><a href="crf-producers.html"><img src="img/partner-icon-1.svg" alt=""> CRF
+                                        producer</a></li>
+                                <li><a href="distributors.html"><img src="img/partner-icon-2.svg" alt="">
+                                        Distributor</a></li>
+                                <li><a href="wholesalers.html"><img src="img/partner-icon-3.svg" alt=""> Wholesaler</a>
+                                </li>
+                                <li><a href="retailers.html"><img src="img/partner-icon-4.svg" alt=""> Retail</a></li>
+                                <li><a href="#"><img src="img/partner-icon-5.svg" alt=""> Login</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about-us.html">About Triferto </a></li>
+                        <li class="dropdown">
+                            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                aria-expanded="false">EN</a>
+                            <a href="#" class="arrow" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu language_dropdown" aria-labelledby="dropdownMenuLink">
+                                <li><a href="#"><img src="img/flag-1.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-2.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-3.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-4.png" alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact-us.html" class="button">
+                                <span>Contact</span>
+                                <img src="img/arrow-circle.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- offcanvas menu -->
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="container">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                        <a href="index.html">
+                            <img src="img/logo.svg" alt="">
+                        </a>
+                    </h5>
+                    <button type="button" class="close_btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <img src="img/close.png" alt="">
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="dropdown">
+                            <a href="crops.html">Crops</a>
+                            <a href="#" class="arrow">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="vegetables.html"><img src="img/crops-icon-1.svg" alt=""> Vegetables</a>
+                                </li>
+                                <li><a href="#"><img src="img/crops-icon-2.svg" alt=""> Soft fruit</a></li>
+                                <li><a href="#"><img src="img/crops-icon-3.svg" alt=""> Orchards</a></li>
+                                <li><a href="vineyards.html"><img src="img/crops-icon-4.svg" alt=""> Vineyards</a></li>
+                                <li><a href="#"><img src="img/crops-icon-5.svg" alt=""> Nurseries</a></li>
+                                <li><a href="forestry.html"><img src="img/crops-icon-6.svg" alt="" class="foresty_icon">
+                                        Forestry</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="partners.html">For Partners</a>
+                            <a href="#" class="arrow">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu partner_dropdown">
+                                <li><a href="crf-producers.html"><img src="img/partner-icon-1.svg" alt=""> CRF
+                                        producer</a></li>
+                                <li><a href="distributors.html"><img src="img/partner-icon-2.svg" alt="">
+                                        Distributor</a></li>
+                                <li><a href="wholesalers.html"><img src="img/partner-icon-3.svg" alt=""> Wholesaler</a>
+                                </li>
+                                <li><a href="retailers.html"><img src="img/partner-icon-4.svg" alt=""> Retail</a></li>
+                                <li><a href="#"><img src="img/partner-icon-5.svg" alt=""> Login</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about-us.html">About Triferto </a></li>
+                        <li class="dropdown language">
+                            <a href="#">EN</a>
+                            <a href="#" class="arrow">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu language_dropdown">
+                                <li><a href="#"><img src="img/flag-1.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-2.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-3.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-4.png" alt=""></a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="container offcanvas_bottom">
+                <ul class="navbar-nav">
+                    <li>
+                        <a href="contact-us.html" class="button">
+                            <span>Contact</span>
+                            <img src="img/arrow-circle.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header_section end -->
+
+
+    <main class="overflow-hidden">
+
+        <!-- home_section start -->
+        <section class="home_area" style="background-image: url(img/home_bg.png);">
+            <div class="container">
+                <div class="home_content">
+                    <strong>Pre-calibrated CRF nutrition for direct rootzone application</strong>
+                    <h1 class="title_xxl">NutriBag™ Rootzone</h1>
+                    <p class="text_sm">Bring smarter nutrient delivery to horticulture and specialty crop markets, under
+                        our label or yours. Small in form. Significant in impact. Designed for accurate rootzone
+                        placement and operational simplicity.</p>
+                    <div class="btn_wrapper">
+                        <a href="#" class="button">
+                            <span>Explore NutriBag™</span>
+                            <img src="img/arrow-circle.svg" alt="">
+                        </a>
+                        <a href="#" class="button button_outline">
+                            <span>Explore Partnership Options</span>
+                            <img src="img/arrow-circle.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+                <img src="img/hand.png" alt="">
+            </div>
+            <img src="img/soil.png" alt="">
+        </section>
+        <!-- home_section end -->
+
+        <!-- solution_section start -->
+        <section class="solution_area">
+            <div class="container">
+                <div class="solution_content mx-auto text-center">
+                    <h2 class="title_xl">The New Solution</h2>
+                    <p class="text_md">The fertilizer market is changing: Increasing environmental regulations, pressure
+                        on nutrient efficiency and the demand for more sustainable crop production. With NutriBag™,
+                        Triferto introduces a unique and next-generation fertilizer application method designed to
+                        support more efficient nutrient use with lower fertilizer input.</p>
+                    <p class="text_md">Our goal is to help partners bring innovative, future-focused fertilizer
+                        solutions to the market through flexible partnership models, including private label and toll
+                        bagging options.</p>
+                    <div class="btn_wrapper justify-content-center pt-3">
+                        <a href="about-us.html" class="button hover_red">
+                            <span>More About Triferto</span>
+                            <img src="img/arrow-circle-red.svg" alt="">
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- middle section -->
+        <div class="bg" style="background-image: url(img/middle-bg.png);">
+            <!-- how it work section -->
+            <section class="how-it-works">
+                <div class="container">
+                    <div class="section_title mx-auto text-center">
+                        <h2 class="title_xl">How It Works</h2>
+                        <p class="text_md">NutriBag™ Rootzone combines selected CRF nutrition, pre-calibrated dosage and
+                            a 100% biodegradable fertilizer bag, designed for simple and accurate placement directly in
+                            the rootzone.</p>
+                    </div>
+
+                    <div class="text-center crops_button_wrap">
+                        <h4 class="title_md">Suitable for professional growing markets:</h4>
+                        <div class="crops_button">
+                            <a href="#">
+                                <span class="default_text"><img src="img/crops-icon-1.svg" alt=""> Vegetables</span>
+                                <span class="hover_text">
+                                    <span class="inner_text">Success stories</span>
+                                    <img src="img/arrow-circle.svg" alt="">
+                                </span>
+                            </a>
+                            <a href="#">
+                                <span class="default_text"><img src="img/crops-icon-2.svg" alt=""> Soft fruit</span>
+                                <span class="hover_text">
+                                    <span class="inner_text">Success stories</span>
+                                    <img src="img/arrow-circle.svg" alt="">
+                                </span>
+                            </a>
+                            <a href="#">
+                                <span class="default_text"><img src="img/crops-icon-3.svg" alt=""> Orchards</span>
+                                <span class="hover_text">
+                                    <span class="inner_text">Success stories</span>
+                                    <img src="img/arrow-circle.svg" alt="">
+                                </span>
+                            </a>
+                            <a href="#">
+                                <span class="default_text"><img src="img/crops-icon-4.svg" alt=""> Vineyards</span>
+                                <span class="hover_text">
+                                    <span class="inner_text">Success stories</span>
+                                    <img src="img/arrow-circle.svg" alt="">
+                                </span>
+                            </a>
+                            <a href="#">
+                                <span class="default_text"><img src="img/crops-icon-5.svg" alt=""> Nurseries</span>
+                                <span class="hover_text">
+                                    <span class="inner_text">Success stories</span>
+                                    <img src="img/arrow-circle.svg" alt="">
+                                </span>
+                            </a>
+                            <a href="#">
+                                <span class="default_text"><img src="img/crops-icon-6.svg" alt="" class="foresty_icon">
+                                    Forestry</span>
+                                <span class="hover_text">
+                                    <span class="inner_text">Success stories</span>
+                                    <img src="img/arrow-circle.svg" alt="">
+                                </span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- why it matters section -->
+            <section class="why-it-matters">
+                <div class="container">
+                    <div class="section_title mx-auto text-center">
+                        <h2 class="title_xl">Why It Matters</h2>
+                        <p class="text_md">NutriBag™ Rootzone brings the 4R Stewardship principles together in one
+                            practical CRF concept. It helps partners offer a simple, market-ready solution built around
+                            a custom fertilizer blend, precise dosage, controlled release and direct rootzone placement.
+                        </p>
+                    </div>
+                    <div class="row g-5">
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="why_card">
+                                <div class="matters_img">
+                                    <img src="img/matters1.svg" alt="">
+                                </div>
+                                <h6 class="text_sm">Right source</h6>
+                                <h5 class="title_sm">Custom Fertilizer Blend</h5>
+                                <p class="text_sm">Fertilizer compositions are tailored to crop-specific nutritional
+                                    requirements.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="why_card">
+                                <div class="matters_img">
+                                    <img src="img/matters2.svg" alt="">
+                                </div>
+                                <h6 class="text_sm">Right rate</h6>
+                                <h5 class="title_sm">Precise Dosage</h5>
+                                <p class="text_sm">Pre-calibrated dosing supports accurate nutrient application while
+                                    helping reduce nutrient losses and over-application.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="why_card">
+                                <div class="matters_img">
+                                    <img src="img/matters3.svg" alt="">
+                                </div>
+                                <h6 class="text_sm">Right place</h6>
+                                <h5 class="title_sm">Rootzone Placement</h5>
+                                <p class="text_sm">Nutrients are positioned directly in the rootzone to support
+                                    efficient uptake and targeted application.</p>
+                            </div>
+                        </div>
+                        <div class="col-lg-3 col-sm-6">
+                            <div class="why_card">
+                                <div class="matters_img">
+                                    <img src="img/matters4.svg" alt="">
+                                </div>
+                                <h6 class="text_sm">Right time</h6>
+                                <h5 class="title_sm">Controlled Release</h5>
+                                <p class="text_sm">CRF technology gradually releases nutrients over time based on crop
+                                    requirements.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+
+        <!-- partner section -->
+        <section class="partner_area text-center">
+            <div class="container">
+                <div class="section_title mx-auto text-center">
+                    <h2 class="title_xl">For Partners</h2>
+                    <h4 class="title_md">Bring NutriBag™ to market in the way that fits your strategy</h4>
+                    <p class="text_md">We offer flexible partnership and private label solutions for different partners.
+                        From toll bagging and co-branded solutions to full NutriBag™ propositions, partners can choose
+                        the level of branding and collaboration that fits their market strategy.</p>
+                </div>
+
+                <h4 class="title_md">Explore the partnership options:</h4>
+                <div class="row justify-content-center g-5">
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="partner_card">
+                            <h5 class="title_sm">Toll bagging</h5>
+                            <div class="partner_img">
+                                <img src="img/partner1.png" alt="">
+                            </div>
+                            <ul>
+                                <li>Private label.</li>
+                                <li>Available in multiple packaging formats: 10kg bags, and 1m³ big bags.</li>
+                                <li>Interested in using conventional fertilizers? Please visit the <a href="#">Triferto
+                                        website</a> or contact our team to discuss the possibilities.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="partner_card">
+                            <h5 class="title_sm">Co-branded with NutriBag™ Rootzone</h5>
+                            <div class="partner_img">
+                                <img src="img/partner2.png" alt="">
+                            </div>
+                            <ul>
+                                <li>Shared visibility.</li>
+                                <li>Available in multiple packaging sizes: 10kg bags, and smaller boxes.</li>
+                                <li>NutriBag™ may be used only when the product contains CRF technology that has been
+                                    validated for safe rootzone placement.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6">
+                        <div class="partner_card">
+                            <h5 class="title_sm">Full NutriBag™ Rootzone Product</h5>
+                            <div class="partner_img">
+                                <img src="img/partner3.png" alt="">
+                            </div>
+                            <ul>
+                                <li>Ready-to-market proposition.</li>
+                                <li>Available in multiple packaging sizes: 10kg bags, and smaller boxes.</li>
+                                <li>NutriBag™ may be used only when the product contains CRF technology that has been
+                                    validated for safe rootzone placement.</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="btn_wrapper justify-content-center">
+                    <a href="partners.html" class="button hover_red">
+                        <span>Read More</span>
+                        <img src="img/arrow-circle-red.svg" alt="">
+                    </a>
+                </div>
+                <p class="text_md">Looking for conventional fertilizer application?<br> Discover additional solutions by
+                    <a href="#">Triferto</a>.
+                </p>
+            </div>
+        </section>
+
+        <!-- interest area -->
+        <section class="crops_section interest_area" style="background-image: url(img/interest-bg.png);">
+            <div class="container z-2">
+                <div class="section_title mx-auto text-center">
+                    <h2 class="title_xl">Interested?</h2>
+                    <p class="text_md">Discover how NutriBag™ can support your business across the fertilizer value
+                        chain, from production and distribution to wholesale and retail.</p>
+                </div>
+            </div>
+
+            <div class="expected_area text-center">
+                <img src="img/soil2.png" alt="">
+
+                <div class="expected_inner_area">
+                    <div class="container">
+                        <h4 class="title_md">What to expect as a:</h4>
+                        <div class="row justify-content-center g-5">
+                            <div class="col-lg-3 col-sm-6">
+                                <a href="crf-producers.html" class="expect_card">
+                                    <img src="img/expect1.svg" alt="">
+                                    <h5 class="title_sm">CRF producer</h5>
+                                    <p>Expand your CRF portfolio with rootzone-ready application.</p>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <a href="distributors.html" class="expect_card">
+                                    <img src="img/expect2.svg" alt="">
+                                    <h5 class="title_sm">Distributor</h5>
+                                    <p>Meet growing demand for sustainable fertilizer solutions.</p>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <a href="wholesalers.html" class="expect_card">
+                                    <img src="img/expect3.svg" alt="">
+                                    <h5 class="title_sm">Wholesaler</h5>
+                                    <p>Ready-to-market CRF solutions for efficient resale.</p>
+                                </a>
+                            </div>
+                            <div class="col-lg-3 col-sm-6">
+                                <a href="retailers.html" class="expect_card">
+                                    <img src="img/expect4.svg" alt="">
+                                    <h5 class="title_sm">Retail</h5>
+                                    <p>Sustainable and easy-to-apply fertilizer solutions.</p>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="step_slider_inner_section text-start pb-5">
+                    <div class="container">
+                        <div class="step_title_box">
+                            <div class="row align-items-end">
+                                <div class="col-lg-3">
+                                    <div class="step_back_button">
+                                        <a href="vegetables.html" class="back_btn ">
+                                            <img src="img/arrow-left.svg" alt="">
+                                            <span class="text_md">Back</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="step_title text-center">
+                                        <img src="img/crf-icon.svg" alt="">
+                                        <h3 class="title_md">What to expect as a CRF producer</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps_slider">
+                        <div class="container">
+
+                            <!-- ============ Counter ============ -->
+                            <div class="steps_slider__counter title_md">
+                                Step <span class="steps_slider__counter-current">1</span>/<span
+                                    class="steps_slider__counter-total">6</span>
+                            </div>
+
+                            <!-- ============ Swiper ============ -->
+
+                            <div class="steps_slider__wrap">
+                                <div class="swiper steps_slider__swiper">
+                                    <div class="swiper-wrapper">
+                                        <!-- slide 1 -->
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Let’s Get Acquainted First!</h2>
+                                                    <p class="text_md">Discuss your crop applications, CRF
+                                                        strategy and partnership goals with the Triferto team.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img01.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 2 -->
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">You Define The CRF Formulation</h2>
+                                                    <p class="text_md">Select the CRF formulation you wish to use in
+                                                        NutriBag™. Flexible dosage options ranging from 10 to 50 grams
+                                                        per bag are available. Our team is happy to support you.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img02.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 3 -->
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Rootzone Qualification</h2>
+                                                    <p class="text_md">Then we validate whether the CRF formulation is
+                                                        suitable and safe for direct rootzone placement based on
+                                                        NutriBag™ guidelines.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img03.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 4 -->
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Production by Triferto</h2>
+                                                    <p class="text_md">Using our specialized toll bagging technology in
+                                                        Zwijnaarde, we package the selected and pre-calibrated
+                                                        fertilizer formulation into the NutriBags, ensuring consistent
+                                                        quality and accuracy.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img04.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 5 -->
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Packaging & Branding</h2>
+                                                    <p class="text_md">Explore toll bagging, private label, co-branding
+                                                        or NutriBag™ Rootzone branding possibilities. Available in
+                                                        multiple packaging formats: 10 kg bags, and 1.2 tonne big bags.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img05.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- slide 6 -->
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg pb-11">Schedule A Meeting!</h2>
+                                                    <div class="step_person_info">
+                                                        <div class="info">
+                                                            <div class="icon">
+                                                                <img src="./img/user.svg" alt="">
+                                                            </div>
+                                                            <h4 class="title_sm">Renée Nederlof</h4>
+                                                        </div>
+                                                        <p class="text_md">Interested in integrating your CRF products
+                                                            with
+                                                            NutriBag™ Rootzone? Let’s meet!
+                                                        </p>
+                                                    </div>
+                                                </div>
+                                                <div class="steps_slider__media">
+                                                    <div class="calendar_widget glass">
+                                                        <div class="dates-section">
+                                                            <h2>Available dates</h2>
+                                                            <div id="calendar-container"></div>
+                                                        </div>
+
+                                                        <div>
+                                                            <div class="timeslots-section">
+                                                                <h2>Timeslots</h2>
+                                                                <div id="timeslots">
+                                                                    <div class="empty-state" id="empty-state">Select a
+                                                                        date to see available times</div>
+                                                                </div>
+                                                            </div>
+
+                                                            <div class="contact">
+                                                                <h3>Or contact us via</h3>
+                                                                <a href="tel:+31314374000">
+                                                                    <svg width="14" height="14" viewBox="0 0 24 24"
+                                                                        fill="currentColor">
+                                                                        <path
+                                                                            d="M6.6 10.8c1.4 2.7 3.6 4.9 6.3 6.3l2.1-2.1c.3-.3.7-.4 1-.2 1.1.4 2.3.6 3.5.6.6 0 1 .4 1 1V20c0 .6-.4 1-1 1C10.6 21 3 13.4 3 4c0-.6.4-1 1-1h3.5c.6 0 1 .4 1 1 0 1.2.2 2.4.6 3.5.1.4 0 .8-.2 1L6.6 10.8z" />
+                                                                    </svg>
+                                                                    + 31 (314) 374000
+                                                                </a>
+                                                                <a href="mailto:info@triferto.eu">
+                                                                    <svg width="14" height="14" viewBox="0 0 24 24"
+                                                                        fill="currentColor">
+                                                                        <path
+                                                                            d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z" />
+                                                                    </svg>
+                                                                    info@triferto.eu
+                                                                </a>
+                                                            </div>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- ============ Buttons============ -->
+                            <div class="swiper_button_group">
+                                <button class="steps_slider__nav steps_slider__nav--prev step_prev"
+                                    aria-label="Previous step">
+                                    <img src="./img/step-slide-prev.svg" alt="">
+                                </button>
+
+                                <button class="steps_slider__nav steps_slider__nav--next step_next"
+                                    aria-label="Next step">
+                                    <img src="./img/step-slide-next.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- ============ Progress trail ============ -->
+                        <div class="container">
+                            <div class="steps_slider__progress" role="tablist" aria-label="Onboarding progress">
+                                <div class="steps_slider__progress-track">
+                                    <div class="steps_slider__progress-fill"></div>
+                                </div>
+                                <div class="steps_slider__progress-dots"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="step_slider_inner_section text-start pb-5">
+                    <div class="container">
+                        <div class="step_title_box">
+                            <div class="row align-items-end">
+                                <div class="col-lg-3">
+                                    <div class="step_back_button">
+                                        <a href="vegetables.html" class="back_btn ">
+                                            <img src="img/arrow-left.svg" alt="">
+                                            <span class="text_md">Back</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="step_title text-center">
+                                        <img src="img/crf-icon.svg" alt="">
+                                        <h3 class="title_md">What to expect as a CRF producer</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps_slider">
+                        <div class="container">
+
+                            <!-- ============ Counter ============ -->
+                            <div class="steps_slider__counter title_md">
+                                Step <span class="steps_slider__counter-current">1</span>/<span
+                                    class="steps_slider__counter-total">6</span>
+                            </div>
+
+                            <!-- ============ Swiper ============ -->
+
+                            <div class="steps_slider__wrap">
+                                <div class="swiper steps_slider__swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Let’s Get Acquainted First!</h2>
+                                                    <p class="text_md">Discuss market demands, sustainability trends and
+                                                        crop segments relevant to your distribution network.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img01.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Select The Right CRF Solution</h2>
+                                                    <p class="text_md">Determine whether you want to use your own CRF
+                                                        formulation or Triferto’s tailor-made CRF fertilizers within the
+                                                        NutriBag™ Rootzone. Flexible dosage options ranging from 10 to
+                                                        50 grams per bag are available.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img02.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Rootzone Qualification</h2>
+                                                    <p class="text_md">When using your own CRF fertilizers, we validate
+                                                        whether the formulation is suitable and safe for direct rootzone
+                                                        placement according to our NutriBag™ Rootzone guidelines.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img03.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Production by Triferto</h2>
+                                                    <p class="text_md">Using our specialized toll bagging technology in
+                                                        Zwijnaarde, we package the selected and pre-calibrated
+                                                        fertilizer formulation into the NutriBags, ensuring consistent
+                                                        quality and accuracy.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img04.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Packaging & Branding</h2>
+                                                    <p class="text_md">Explore distribution-ready solutions, ranging
+                                                        from private label to co-branded NutriBag™ Rootzone
+                                                        propositions. Available in multiple packaging sizes: 10 kg bags
+                                                        and smaller boxes.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img06.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg pb-11">Schedule A Meeting!</h2>
+                                                    <div class="step_person_info">
+                                                        <div class="info">
+                                                            <div class="icon">
+                                                                <img src="./img/user.svg" alt="">
+                                                            </div>
+                                                            <h4 class="title_sm">Renée Nederlof</h4>
+                                                        </div>
+                                                        <p class="text_md">Interested in integrating your CRF products
+                                                            with
+                                                            NutriBag™ Rootzone? Let’s meet!
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img05.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- ============ Buttons============ -->
+                            <div class="swiper_button_group">
+                                <button class="steps_slider__nav steps_slider__nav--prev step_prev"
+                                    aria-label="Previous step">
+                                    <img src="./img/step-slide-prev.svg" alt="">
+                                </button>
+
+                                <button class="steps_slider__nav steps_slider__nav--next step_next"
+                                    aria-label="Next step">
+                                    <img src="./img/step-slide-next.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- ============ Progress trail ============ -->
+                        <div class="container">
+                            <div class="steps_slider__progress" role="tablist" aria-label="Onboarding progress">
+                                <div class="steps_slider__progress-track">
+                                    <div class="steps_slider__progress-fill"></div>
+                                </div>
+                                <div class="steps_slider__progress-dots"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="step_slider_inner_section text-start pb-5">
+                    <div class="container">
+                        <div class="step_title_box">
+                            <div class="row align-items-end">
+                                <div class="col-lg-3">
+                                    <div class="step_back_button">
+                                        <a href="vegetables.html" class="back_btn ">
+                                            <img src="img/arrow-left.svg" alt="">
+                                            <span class="text_md">Back</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="step_title text-center">
+                                        <img src="img/crf-icon.svg" alt="">
+                                        <h3 class="title_md">What to expect as a CRF producer</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps_slider">
+                        <div class="container">
+
+                            <!-- ============ Counter ============ -->
+                            <div class="steps_slider__counter title_md">
+                                Step <span class="steps_slider__counter-current">1</span>/<span
+                                    class="steps_slider__counter-total">6</span>
+                            </div>
+
+                            <!-- ============ Swiper ============ -->
+
+                            <div class="steps_slider__wrap">
+                                <div class="swiper steps_slider__swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Let’s Get Acquainted First!</h2>
+                                                    <p class="text_md">Discuss market opportunities, crop segments and
+                                                        resale possibilities with the Triferto team.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img01.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg pb-12">We Formulate The Right CRF Solution</h2>
+                                                    <p class="text_md">Our nutritional specialist develops a
+                                                        rootzone-safe CRF formulation, tailored to the nutritional
+                                                        requirements of specific crops. Flexible dosage options ranging
+                                                        from 10 to 50 grams per bag are available.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img02.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Production by Triferto</h2>
+                                                    <p class="text_md">Using our specialized toll bagging technology in
+                                                        Zwijnaarde, we package the selected and pre-calibrated
+                                                        fertilizer formulation into the NutriBags, ensuring consistent
+                                                        quality and accuracy.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img04.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Packaging & Branding</h2>
+                                                    <p class="text_md">Choose the preferred branding approach, ranging
+                                                        from private label to full NutriBag™ Rootzone propositions.
+                                                        Available in multiple packaging sizes: 10 kg bags and smaller
+                                                        boxes.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img06.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg pb-11">Schedule A Meeting!</h2>
+                                                    <div class="step_person_info">
+                                                        <div class="info">
+                                                            <div class="icon">
+                                                                <img src="./img/user.svg" alt="">
+                                                            </div>
+                                                            <h4 class="title_sm">Renée Nederlof</h4>
+                                                        </div>
+                                                        <p class="text_md">Interested in integrating your CRF products
+                                                            with
+                                                            NutriBag™ Rootzone? Let’s meet!
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img05.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- ============ Buttons============ -->
+                            <div class="swiper_button_group">
+                                <button class="steps_slider__nav steps_slider__nav--prev step_prev"
+                                    aria-label="Previous step">
+                                    <img src="./img/step-slide-prev.svg" alt="">
+                                </button>
+
+                                <button class="steps_slider__nav steps_slider__nav--next step_next"
+                                    aria-label="Next step">
+                                    <img src="./img/step-slide-next.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- ============ Progress trail ============ -->
+                        <div class="container">
+                            <div class="steps_slider__progress" role="tablist" aria-label="Onboarding progress">
+                                <div class="steps_slider__progress-track">
+                                    <div class="steps_slider__progress-fill"></div>
+                                </div>
+                                <div class="steps_slider__progress-dots"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+                <div class="step_slider_inner_section text-start">
+                    <div class="container">
+                        <div class="step_title_box">
+                            <div class="row align-items-end">
+                                <div class="col-lg-3">
+                                    <div class="step_back_button">
+                                        <a href="vegetables.html" class="back_btn ">
+                                            <img src="img/arrow-left.svg" alt="">
+                                            <span class="text_md">Back</span>
+                                        </a>
+                                    </div>
+                                </div>
+
+                                <div class="col-lg-6">
+                                    <div class="step_title text-center">
+                                        <img src="img/crf-icon.svg" alt="">
+                                        <h3 class="title_md">What to expect as a CRF producer</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="steps_slider">
+                        <div class="container">
+
+                            <!-- ============ Counter ============ -->
+                            <div class="steps_slider__counter title_md">
+                                Step <span class="steps_slider__counter-current">1</span>/<span
+                                    class="steps_slider__counter-total">6</span>
+                            </div>
+
+                            <!-- ============ Swiper ============ -->
+
+                            <div class="steps_slider__wrap">
+                                <div class="swiper steps_slider__swiper">
+                                    <div class="swiper-wrapper">
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Let’s Get Acquainted First!</h2>
+                                                    <p class="text_md">Discuss customer needs, crop applications and
+                                                        market trends together with the Triferto team.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img01.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg pb-12">We Formulate The Right CRF Solution</h2>
+                                                    <p class="text_md">Our nutritional specialist develops a
+                                                        rootzone-safe CRF formulation, tailored to the nutritional
+                                                        requirements of specific crops. Flexible dosage options ranging
+                                                        from 10 to 50 grams per bag are available.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img02.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Production by Triferto</h2>
+                                                    <p class="text_md">Using our specialized toll bagging technology in
+                                                        Zwijnaarde, we package the selected and pre-calibrated
+                                                        fertilizer formulation into the NutriBags, ensuring consistent
+                                                        quality and accuracy.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img04.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg">Packaging & Branding</h2>
+                                                    <p class="text_md">Explore branding possibilities, ranging from
+                                                        private label solutions to full NutriBag™ Rootzone propositions.
+                                                        Available in multiple packaging sizes: 10 kg bags and smaller
+                                                        boxes.
+                                                    </p>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img05.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="swiper-slide">
+                                            <div class="steps_slider__slide">
+                                                <div class="steps_slider__text">
+                                                    <h2 class="title_lg pb-11">Schedule A Meeting!</h2>
+                                                    <div class="step_person_info">
+                                                        <div class="info">
+                                                            <div class="icon">
+                                                                <img src="./img/user.svg" alt="">
+                                                            </div>
+                                                            <h4 class="title_sm">Renée Nederlof</h4>
+                                                        </div>
+                                                        <p class="text_md">Interested in integrating your CRF products
+                                                            with
+                                                            NutriBag™ Rootzone? Let’s meet!
+                                                        </p>
+                                                    </div>
+                                                </div>
+
+                                                <div class="steps_slider__media">
+                                                    <img src="./img/step-slider-img05.png" alt="image">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                </div>
+                            </div>
+
+                            <!-- ============ Buttons============ -->
+                            <div class="swiper_button_group">
+                                <button class="steps_slider__nav steps_slider__nav--prev step_prev"
+                                    aria-label="Previous step">
+                                    <img src="./img/step-slide-prev.svg" alt="">
+                                </button>
+
+                                <button class="steps_slider__nav steps_slider__nav--next step_next"
+                                    aria-label="Next step">
+                                    <img src="./img/step-slide-next.svg" alt="">
+                                </button>
+                            </div>
+
+                        </div>
+
+                        <!-- ============ Progress trail ============ -->
+                        <div class="container">
+                            <div class="steps_slider__progress" role="tablist" aria-label="Onboarding progress">
+                                <div class="steps_slider__progress-track">
+                                    <div class="steps_slider__progress-fill"></div>
+                                </div>
+                                <div class="steps_slider__progress-dots"></div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+
+            <div class="container z-2">
+                <div class="client_section">
+                    <div class="client_wrapper">
+                        <div class="client_text">
+                            <h4 class="title_lg">We’re happy to explore the possibilities with you</h4>
+                            <p class="text_sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                                ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                                montes, nascetur ridiculus mus. </p>
+                            <a href="#" class="button">
+                                <span>Contact</span>
+                                <img src="img/arrow-circle.svg" alt="">
+                            </a>
+                        </div>
+
+                        <div class="client_item">
+                            <img src="img/client.png" alt="">
+                            <h6>Kai Kikkers, CEO Triferto</h6>
+                            <div class="client_details">
+                                <p>“Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                    dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.”</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+
+    <!-- footer_section start -->
+    <footer class="footer_section">
+        <div class="footer_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer_item">
+                            <div class="footer_logo d-md-none">
+                                <a href="index.html">
+                                    <img src="img/logo.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="footer_text">
+                                <h4>Solutions</h4>
+                                <ul>
+                                    <li><a href="partners.html">Toll bagging</a></li>
+                                    <li><a href="partners.html">Co-branding</a></li>
+                                    <li><a href="partners.html">Full NutriBag™ product</a></li>
+                                    <li><a href="#">Other solutions <img src="img/edit-icon.svg" alt=""></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="footer_logo d-none d-md-block">
+                                <a href="index.html">
+                                    <img src="img/logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer_item">
+                            <h4>Solutions for</h4>
+                            <ul>
+                                <li><a href="crf-producers.html">CRF producers</a></li>
+                                <li><a href="distributors.html">Distributors</a></li>
+                                <li><a href="wholesalers.html">Wholesalers</a></li>
+                                <li><a href="retailers.html">Retail</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer_item">
+                            <h4>Contact</h4>
+                            <h5>The Netherlands</h5>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/location.svg" alt="" class="location me-1">
+                                        Koopmanslaan 8 7005 BK <br> Doetinchem
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel: + 31 (314) 374000">
+                                        <img src="img/phone.svg" alt="">
+                                        + 31 (314) 374000
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto: info@triferto.eu">
+                                        <img src="img/email.svg" alt="" class="email">
+                                        info@triferto.eu
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <h5 class="mt-3">Belgium</h5>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/location.svg" alt="" class="location me-1">
+                                        Scheldekanaaltragel 3 <br> 9052 Gent
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel: + 32 9 244 51 70">
+                                        <img src="img/phone.svg" alt="">
+                                        + 32 9 244 51 70
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto: info@triferto.eu">
+                                        <img src="img/email.svg" alt="" class="email">
+                                        info@triferto.eu
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer_item">
+                            <h4>Schedule a meeting</h4>
+                            <p>Interested? Easily schedule a meeting <br> via our digital agenda</p>
+                            <a href="contact-us.html" class="meeting_link">Schedule a meeting <img
+                                    src="img/arrow-right.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="footer_bottom_item">
+                    <div class="social_icon">
+                        <a href="#">
+                            <img src="img/linkedin.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="footer_bottom_text">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li>&copy; 2026 NutriBag</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer_bottom_text">
+                        <p>Solution By Triferto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_section end -->
+
+
+    <!-- all js here -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/main.js"></script>
+
+</body>
+
+</html>

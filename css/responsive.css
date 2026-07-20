@@ -1,0 +1,548 @@
+/* --- Desktop | 1200px and up ---- */
+
+@media screen and (min-width: 1200px) {
+
+    .container {
+        max-width: 1260px;
+    }
+
+    .container_sm {
+        max-width: 1122px;
+    }
+
+    .container_lg {
+        max-width: 1362px;
+    }
+}
+
+
+/* --- Laptop Landscope | 992px to 1199px ---- */
+
+@media screen and (min-width: 992px) and (max-width: 1199px) {
+
+    html {
+        font-size: 50%;
+    }
+
+    .footer_logo img {
+        width: 17.5rem;
+    }
+
+    .footer_item p br {
+        display: none;
+    }
+
+    .hero_section {
+        padding: 24rem 0rem 20rem;
+    }
+
+    .crops_button {
+        gap: 0.8rem;
+    }
+
+    .crops_button a {
+        font-size: 1.6rem;
+        width: 16.5rem;
+    }
+
+    .case_study_area .content p,
+    .case_study_area .content li {
+        font-size: 1.8rem;
+    }
+
+}
+
+
+@media (min-width: 992px) {
+
+    .meeting_section .row {
+        --bs-gutter-x: 5.2rem;
+    }
+
+    .meeting_section .col-lg-4 {
+        width: 35.5%;
+    }
+
+    .meeting_section .col-lg-8 {
+        width: 64.5%;
+    }
+
+}
+
+/* --- Tablet | 991px and down ---- */
+
+@media screen and (max-width: 991px) {
+
+    .title_xxl {
+        font-size: 5rem;
+    }
+
+    .title_xl {
+        font-size: 3.6rem;
+    }
+
+    .title_lg {
+        font-size: 2.8rem;
+    }
+
+    .text_md {
+        font-size: 1.8rem;
+    }
+
+    .text_sm {
+        font-size: 1.7rem;
+    }
+
+    .navbar-brand .logo {
+        width: 11rem;
+    }
+
+    .footer_section {
+        background-size: cover;
+        margin-top: -6.5rem;
+    }
+
+    .footer_wrapper .row {
+        --bs-gutter-y: 4rem;
+    }
+
+    .footer_logo img {
+        width: 15rem;
+    }
+
+    .footer_bottom_text ul {
+        gap: 1.8rem;
+    }
+
+    .footer_bottom_text li,
+    .footer_bottom_text a,
+    .footer_bottom_text p {
+        font-size: 1.5rem;
+    }
+
+    .hero_section {
+        padding: 20rem 0rem 16rem;
+    }
+
+
+    /* crops page */
+    .crops_section {
+        padding: 8rem 0rem 18rem;
+    }
+
+    .crops_button {
+        justify-content: center;
+    }
+
+    .stories_wraper {
+        padding-top: 5rem;
+    }
+
+    .stories_wraper .row {
+        --bs-gutter-x: 3rem;
+        --bs-gutter-y: 4rem;
+    }
+
+    .trial_section {
+        padding-top: 10rem;
+    }
+
+    .client_section {
+        padding-top: 12rem;
+    }
+
+    .client_wrapper {
+        flex-direction: column-reverse;
+        gap: 3.5rem;
+    }
+
+    .client_text {
+        max-width: 100%;
+    }
+
+    .client_item {
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .case_study_area .content {
+        padding: 5rem 0 0 0;
+    }
+
+    /* =========About page start========== */
+
+    .about_hero .hero_text {
+        padding: 0;
+    }
+
+    .about_section {
+        padding: 10rem 0 12rem;
+    }
+
+    .about_vlog_content p {
+        max-width: 100%;
+    }
+
+    .about_vlog_image img {
+        max-width: 100%;
+        margin-bottom: 7rem;
+    }
+
+    .about_vlog {
+        padding-bottom: 11rem;
+    }
+
+    .behind_video video {
+        height: 38.2rem;
+    }
+
+    .behind_section_bg img {
+        height: 90rem;
+    }
+
+    /* =========About page end========== */
+
+
+    /* =========Contact page start========== */
+    .contact_hero .hero_text {
+        padding: 0;
+    }
+
+    .meeting_wrap .user_info {
+        padding-bottom: 4rem;
+    }
+
+    .meeting_wrap .user_info h3 {
+        text-align: center;
+        padding-bottom: 3rem;
+    }
+
+    .meeting_wrap .user_vlog {
+        padding-bottom: 5rem;
+    }
+
+    /* =========Contact page end========== */
+
+
+    /* =========Partner page start========== */
+
+    .flexible_option .option_image {
+        margin: 0 auto;
+        text-align: center;
+        padding: 5rem;
+    }
+
+    /* =========Partner page end========== */
+
+}
+
+
+/* --- Mobile | 767px and down ---- */
+
+@media screen and (max-width: 767px) {
+
+    .container {
+        padding-left: 2rem;
+        padding-right: 2rem;
+    }
+
+    .title_xxl {
+        font-size: 3.8rem;
+    }
+
+    .title_xl {
+        font-size: 3rem;
+    }
+
+    .title_lg {
+        font-size: 2.4rem;
+    }
+
+    .title_md {
+        font-size: 2.2rem;
+    }
+
+    .text_md {
+        font-size: 1.8rem;
+    }
+
+    .text_sm {
+        font-size: 1.6rem;
+    }
+
+    .text_base {
+        font-size: 1.5rem;
+    }
+
+    .footer_section {
+        margin-top: -10rem;
+    }
+
+    .footer_wrapper {
+        padding-top: 19rem;
+    }
+
+    .footer_wrapper .row {
+        --bs-gutter-y: 2.6rem;
+    }
+
+    .footer_logo {
+        margin-bottom: 3rem;
+        padding-top: 0rem;
+    }
+
+    .footer_logo img {
+        width: 14rem;
+    }
+
+    .footer_item {
+        text-align: center;
+    }
+
+    .footer_item ul li a {
+        align-items: flex-start;
+    }
+
+    .footer_item ul li img {
+        margin-top: 0.2rem;
+    }
+
+    .footer_bottom_text ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        row-gap: 0.8rem;
+        column-gap: 2.4rem;
+        padding: 2rem 0rem 1rem;
+    }
+
+    .footer_bottom_item {
+        flex-direction: column;
+    }
+
+    .hero_section {
+        padding: 20rem 0rem 15rem;
+    }
+
+
+    /* crops page */
+    .crops_section {
+        padding: 7rem 0rem 16rem;
+    }
+
+    .crops_button {
+        justify-content: center;
+        gap: 1.2rem;
+    }
+
+    .stories_wraper {
+        padding-top: 4rem;
+    }
+
+    .stories_wraper .row {
+        --bs-gutter-x: 1.5rem;
+        --bs-gutter-y: 4rem;
+    }
+
+    .trial_section {
+        padding-top: 8.5rem;
+    }
+
+    .client_section {
+        padding-top: 10rem;
+    }
+
+    .client_wrapper {
+        padding: 3rem 2rem;
+        gap: 3rem;
+    }
+
+    .case_study_area {
+        padding-top: 4rem;
+    }
+
+    .case_study_tags {
+        gap: 1.2rem;
+        padding-top: 3.2rem;
+    }
+
+    .back_btn {
+        font-size: 1.8rem;
+    }
+
+    .case_study_area .title_xl {
+        padding: 6.4rem 0 3.2rem;
+        text-align: center;
+    }
+
+    .case_study_area .content {
+        padding-top: 3.2rem;
+
+    }
+
+    .case_study__testimonial .txt,
+    .case_study__testimonial .name,
+    .case_study_area .content p,
+    .case_study_area .content li {
+        font-size: 1.6rem;
+    }
+
+    .case_study_area .section_content {
+        padding: 6rem 0;
+    }
+
+    .avatar_box {
+        gap: 1.6rem;
+        padding-top: 3rem;
+    }
+
+    .avatar_box img {
+        width: 5rem;
+        height: 5rem;
+    }
+
+    .avatar_box p {
+        font-size: 1.6rem;
+    }
+
+    /* ============About page start============= */
+
+    .about_vlog {
+        padding-bottom: 8rem;
+    }
+
+    .about_vlog_image img {
+        margin-bottom: 5rem;
+    }
+
+    .about_vlog_content h3 {
+        padding-bottom: 2rem;
+    }
+
+    .about_vlog_content p:not(:last-child) {
+        padding-bottom: 1.7rem;
+    }
+
+    .behind_section {
+        padding-bottom: 21rem;
+    }
+
+    .behind_title_box {
+        padding-bottom: 8rem;
+    }
+
+    .behind_video video {
+        height: 21rem;
+    }
+
+    .behind_section_bg img {
+        width: 100%;
+        height: 74rem;
+    }
+
+
+    .about_swiper_section {
+        padding: 8rem 0;
+    }
+
+    .about_swiper_section .swiper {
+        overflow: hidden;
+    }
+
+    .about_swiper_section .swiper-slide {
+        border-radius: 2.6rem;
+        overflow: hidden;
+        padding: 0 2rem;
+    }
+
+    .about_swiper_section img {
+        height: 23rem;
+    }
+
+    .client_section.pt_180 {
+        padding-top: 12rem;
+    }
+
+    /* ============About page end============= */
+
+
+    /* ============Contact page start============= */
+
+    .meeting_section {
+        padding: 8rem 0 20rem;
+    }
+
+    .meeting_wrap {
+        padding: 6rem 2.4rem 5rem;
+    }
+
+    .meeting_title {
+        padding-bottom: 7rem;
+    }
+
+    .meeting_wrap .icon img {
+        width: 7rem;
+    }
+
+    .meeting_wrap .user_info h3 br {
+        display: none;
+    }
+
+    /* ============Contact page end============= */
+
+
+    /* =========Partner page start========== */
+
+    .flexible_section {
+        padding: 8rem 0;
+    }
+
+    .flexible_wrap {
+        padding-bottom: 8rem;
+    }
+
+    .flexible_wrap p:not(:last-child) {
+        padding-bottom: 2rem;
+    }
+
+    .flexible_option.option01 {
+        padding: 2rem 0 5.8rem;
+    }
+
+    .flexible_option.option02 {
+        padding: 6rem 0;
+    }
+
+    .flexible_option.option03 {
+        padding: 3rem 0 5rem;
+    }
+
+    .flexible_option .option_content h3 {
+        padding-bottom: 2rem;
+    }
+
+    .flexible_option .option_content p:not(:last-child) {
+        padding-bottom: 2rem;
+    }
+
+    .flexible_option .option_content ul {
+        padding-bottom: 2rem;
+    }
+
+    .flexible_option .option_image img {
+        max-width: 100%;
+    }
+
+    /* =========Partner page end========== */
+
+}
+
+
+/*----- xs devices 575px and down -----*/
+@media screen and (max-width: 575px) {
+
+    html {
+        font-size: 2.415vw;
+    }
+
+}

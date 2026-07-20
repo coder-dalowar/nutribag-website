@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- title -->
+    <title>NutriBag</title>
+
+    <!-- favicon -->
+    <link href="img/favicon.png" type="image/png" rel="icon">
+
+    <!-- all css here -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+    <link rel="stylesheet" href="css/calendar.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+
+<body class="crf_product">
+
+    <!-- header_section start -->
+    <header class="header_section">
+        <div class="container">
+            <nav class="navbar navbar-expand-lg p-0">
+                <a class="navbar-brand m-0 p-0" href="index.html">
+                    <img src="img/logo.svg" alt="" class="logo">
+                    <img src="img/logo-icon.svg" alt="" class="logo_icon">
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas"
+                    data-bs-target="#offcanvasExample" aria-controls="offcanvasExample">
+                    <img src="img/hamburgar.png">
+                </button>
+                <div class="collapse navbar-collapse">
+                    <ul class="navbar-nav ms-auto align-items-center">
+                        <li class="dropdown">
+                            <a href="crops.html">Crops</a>
+                            <a href="#" class="arrow" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                <li><a href="vegetables.html"><img src="img/crops-icon-1.svg" alt=""> Vegetables</a>
+                                </li>
+                                <li><a href="#"><img src="img/crops-icon-2.svg" alt=""> Soft fruit</a></li>
+                                <li><a href="#"><img src="img/crops-icon-3.svg" alt=""> Orchards</a></li>
+                                <li><a href="vineyards.html"><img src="img/crops-icon-4.svg" alt=""> Vineyards</a></li>
+                                <li><a href="#"><img src="img/crops-icon-5.svg" alt=""> Nurseries</a></li>
+                                <li><a href="forestry.html"><img src="img/crops-icon-6.svg" alt="" class="foresty_icon">
+                                        Forestry</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="partners.html">For Partners</a>
+                            <a href="#" class="arrow" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu partner_dropdown" aria-labelledby="dropdownMenuLink">
+                                <li><a href="crf-producers.html"><img src="img/partner-icon-1.svg" alt=""> CRF
+                                        producer</a></li>
+                                <li><a href="distributors.html"><img src="img/partner-icon-2.svg" alt="">
+                                        Distributor</a></li>
+                                <li><a href="wholesalers.html"><img src="img/partner-icon-3.svg" alt=""> Wholesaler</a>
+                                </li>
+                                <li><a href="retailers.html"><img src="img/partner-icon-4.svg" alt=""> Retail</a></li>
+                                <li><a href="#"><img src="img/partner-icon-5.svg" alt=""> Login</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about-us.html">About Triferto </a></li>
+                        <li class="dropdown">
+                            <a href="#" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                aria-expanded="false">EN</a>
+                            <a href="#" class="arrow" role="button" id="dropdownMenuLink" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu language_dropdown" aria-labelledby="dropdownMenuLink">
+                                <li><a href="#"><img src="img/flag-1.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-2.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-3.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-4.png" alt=""></a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <a href="contact-us.html" class="button">
+                                <span>Contact</span>
+                                <img src="img/arrow-circle.svg" alt="">
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+
+        <!-- offcanvas menu -->
+        <div class="offcanvas offcanvas-start d-lg-none" tabindex="-1" id="offcanvasExample"
+            aria-labelledby="offcanvasExampleLabel">
+            <div class="container">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasExampleLabel">
+                        <a href="index.html">
+                            <img src="img/logo.svg" alt="">
+                        </a>
+                    </h5>
+                    <button type="button" class="close_btn" data-bs-dismiss="offcanvas" aria-label="Close">
+                        <img src="img/close.png" alt="">
+                    </button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav">
+                        <li class="dropdown">
+                            <a href="crops.html">Crops</a>
+                            <a href="#" class="arrow">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu">
+                                <li><a href="vegetables.html"><img src="img/crops-icon-1.svg" alt=""> Vegetables</a>
+                                </li>
+                                <li><a href="#"><img src="img/crops-icon-2.svg" alt=""> Soft fruit</a></li>
+                                <li><a href="#"><img src="img/crops-icon-3.svg" alt=""> Orchards</a></li>
+                                <li><a href="vineyards.html"><img src="img/crops-icon-4.svg" alt=""> Vineyards</a></li>
+                                <li><a href="#"><img src="img/crops-icon-5.svg" alt=""> Nurseries</a></li>
+                                <li><a href="forestry.html"><img src="img/crops-icon-6.svg" alt="" class="foresty_icon">
+                                        Forestry</a></li>
+                            </ul>
+                        </li>
+
+                        <li class="dropdown">
+                            <a href="partners.html">For Partners</a>
+                            <a href="#" class="arrow">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu partner_dropdown">
+                                <li><a href="crf-producers.html"><img src="img/partner-icon-1.svg" alt=""> CRF
+                                        producer</a></li>
+                                <li><a href="distributors.html"><img src="img/partner-icon-2.svg" alt="">
+                                        Distributor</a></li>
+                                <li><a href="wholesalers.html"><img src="img/partner-icon-3.svg" alt=""> Wholesaler</a>
+                                </li>
+                                <li><a href="retailers.html"><img src="img/partner-icon-4.svg" alt=""> Retail</a></li>
+                                <li><a href="#"><img src="img/partner-icon-5.svg" alt=""> Login</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="about-us.html">About Triferto </a></li>
+                        <li class="dropdown language">
+                            <a href="#">EN</a>
+                            <a href="#" class="arrow">
+                                <img src="img/down.svg" alt="">
+                            </a>
+
+                            <ul class="dropdown-menu language_dropdown">
+                                <li><a href="#"><img src="img/flag-1.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-2.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-3.png" alt=""></a></li>
+                                <li><a href="#"><img src="img/flag-4.png" alt=""></a></li>
+                            </ul>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+            <div class="container offcanvas_bottom">
+                <ul class="navbar-nav">
+                    <li>
+                        <a href="contact-us.html" class="button">
+                            <span>Contact</span>
+                            <img src="img/arrow-circle.svg" alt="">
+                        </a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </header>
+    <!-- header_section end -->
+
+
+    <main class="overflow-hidden">
+
+        <!-- hero_section start -->
+        <section class="hero_section" style="background-image: url('img/distributor-hero-bg.png');">
+            <div class="container">
+                <div class="hero_text">
+                    <h2 class="title_xxl">For Distributors</h2>
+                    <p class="text_sm">Meet growing demand for sustainable fertilizer solutions.</p>
+                </div>
+            </div>
+        </section>
+        <!-- hero_section end -->
+
+
+
+        <!-- client section start -->
+        <section class="client_section pt_180 pb_156">
+            <div class="container">
+                <div class="client_wrapper">
+                    <div class="client_text">
+                        <h4 class="title_lg">We’re happy to explore the possibilities with you</h4>
+                        <p class="text_sm">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo
+                            ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient
+                            montes, nascetur ridiculus mus. </p>
+                        <a href="contact-us.html" class="button">
+                            <span>Contact</span>
+                            <img src="img/arrow-circle.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="client_item">
+                        <img src="img/client.png" alt="">
+                        <h6>Kai Kikkers, CEO Triferto</h6>
+                        <div class="client_details">
+                            <p>“Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget
+                                dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient.”</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <!-- client section end -->
+
+    </main>
+
+
+    <!-- footer_section start -->
+    <footer class="footer_section">
+        <div class="footer_wrapper">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer_item">
+                            <div class="footer_logo d-md-none">
+                                <a href="index.html">
+                                    <img src="img/logo.svg" alt="">
+                                </a>
+                            </div>
+
+                            <div class="footer_text">
+                                <h4>Solutions</h4>
+                                <ul>
+                                    <li><a href="partners.html">Toll bagging</a></li>
+                                    <li><a href="partners.html">Co-branding</a></li>
+                                    <li><a href="partners.html">Full NutriBag™ product</a></li>
+                                    <li><a href="#">Other solutions <img src="img/edit-icon.svg" alt=""></a></li>
+                                </ul>
+                            </div>
+
+                            <div class="footer_logo d-none d-md-block">
+                                <a href="index.html">
+                                    <img src="img/logo.svg" alt="">
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer_item">
+                            <h4>Solutions for</h4>
+                            <ul>
+                                <li><a href="crf-producers.html">CRF producers</a></li>
+                                <li><a href="distributors.html">Distributors</a></li>
+                                <li><a href="wholesalers.html">Wholesalers</a></li>
+                                <li><a href="retailers.html">Retail</a></li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer_item">
+                            <h4>Contact</h4>
+                            <h5>The Netherlands</h5>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/location.svg" alt="" class="location me-1">
+                                        Koopmanslaan 8 7005 BK <br> Doetinchem
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel: + 31 (314) 374000">
+                                        <img src="img/phone.svg" alt="">
+                                        + 31 (314) 374000
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto: info@triferto.eu">
+                                        <img src="img/email.svg" alt="" class="email">
+                                        info@triferto.eu
+                                    </a>
+                                </li>
+                            </ul>
+
+                            <h5 class="mt-3">Belgium</h5>
+                            <ul>
+                                <li>
+                                    <a href="#">
+                                        <img src="img/location.svg" alt="" class="location me-1">
+                                        Scheldekanaaltragel 3 <br> 9052 Gent
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="tel: + 32 9 244 51 70">
+                                        <img src="img/phone.svg" alt="">
+                                        + 32 9 244 51 70
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="mailto: info@triferto.eu">
+                                        <img src="img/email.svg" alt="" class="email">
+                                        info@triferto.eu
+                                    </a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <div class="footer_item">
+                            <h4>Schedule a meeting</h4>
+                            <p>Interested? Easily schedule a meeting <br> via our digital agenda</p>
+                            <a href="contact-us.html" class="meeting_link">Schedule a meeting <img
+                                    src="img/arrow-right.svg" alt=""></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer_bottom">
+            <div class="container">
+                <div class="footer_bottom_item">
+                    <div class="social_icon">
+                        <a href="#">
+                            <img src="img/linkedin.svg" alt="">
+                        </a>
+                    </div>
+
+                    <div class="footer_bottom_text">
+                        <ul>
+                            <li><a href="#">Privacy Policy</a></li>
+                            <li><a href="#">Cookies</a></li>
+                            <li><a href="#">Terms & Conditions</a></li>
+                            <li>&copy; 2026 NutriBag</li>
+                        </ul>
+                    </div>
+
+                    <div class="footer_bottom_text">
+                        <p>Solution By Triferto</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- footer_section end -->
+
+
+    <!-- all js here -->
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/swiper.min.js"></script>
+    <script src="js/calendar.js"></script>
+    <script src="js/main.js"></script>
+</body>
+
+</html>
