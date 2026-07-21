@@ -1925,7 +1925,19 @@ h6 {
     width: 2.2rem;
 }
 
+.contact_calendar {
+    height: auto !important;
+}
 
+.contact_calendar #calendar-container {
+    height: auto !important;
+}
+
+.dates-vlog h2,
+.timeslots-vlog h2 {
+    color: var(--beige);
+    padding-bottom: 1.4rem;
+}
 
 /* =============Contact us page end=============== */
 
@@ -2086,10 +2098,6 @@ h6 {
     padding-bottom: 2.3rem;
 }
 
-
-
-
-
 /* ============ Step slider ============ */
 
 .steps_slider {
@@ -2104,8 +2112,10 @@ h6 {
 /* Counter */
 
 .steps_slider__counter {
+    font-family: var(--font-poppins);
     color: var(--rust-brown);
-    padding-bottom: 1.8rem;
+    margin-bottom: -2.5rem;
+
 }
 
 /* Swiper */
@@ -2124,27 +2134,69 @@ h6 {
 }
 
 .steps_slider__text h2 {
+    font-family: var(--font-poppins);
     max-width: 52rem;
-    padding-bottom: 16rem;
+    margin-top: 4rem;
+    padding-bottom: 14rem;
 }
 
-.steps_slider__text h2.pb-12 {
+.steps_slider__text h2.pb-8 {
     padding: 0;
-    padding-bottom: 12rem;
+    padding-bottom: 8rem;
 }
 
-.steps_slider__text h2.pb-11 {
+.steps_slider__text h2.pb-8 {
     padding: 0;
-    padding-bottom: 11rem;
+    padding-bottom: 8rem;
+}
+
+.steps_slider__text h2.pb-10 {
+    padding: 0;
+    padding-bottom: 10rem;
+}
+
+.steps_slider__text h2.pb-13 {
+    padding: 0;
+    padding-bottom: 13rem;
+}
+
+.steps_slider__text h2.pb-15 {
+    padding: 0;
+    padding-bottom: 15rem;
+}
+
+.steps_slider__text h2.pb-17 {
+    padding: 0;
+    padding-bottom: 17rem;
 }
 
 .steps_slider__text p {
-    max-width: 42rem;
-    margin-left: 10.6rem;
+    max-width: 44rem;
+    padding-left: 10.6rem;
+}
+
+.steps_slider__text p.max-46 {
+    max-width: 46rem;
+}
+
+.steps_slider__text p.max-48 {
+    max-width: 48rem;
+}
+
+.steps_slider__text p.max-52 {
+    max-width: 52rem;
+}
+
+.steps_slider__text p.max-54 {
+    max-width: 54rem;
+}
+
+.steps_slider__text p.pl-0 {
+    padding: 0;
 }
 
 .step_person_info {
-    margin-left: 10.6rem;
+    padding-left: 10.6rem;
 }
 
 .step_person_info .info {
@@ -2164,8 +2216,8 @@ h6 {
 }
 
 .step_person_info p {
-    max-width: 23rem;
-    margin: 0;
+    max-width: 24rem;
+    padding: 0;
 }
 
 .step_person_info h4 {
@@ -2261,56 +2313,74 @@ h6 {
 }
 
 
-
-
-
-
 /* ============== calendar widget ================= */
 
-
+.calendae_slider {
+    grid-template-columns: 1fr 1.7fr;
+}
 
 .calendar_widget {
+    max-width: 77.6rem;
+    width: 100%;
+    height: 44.3rem;
+    background: rgba(148, 65, 49, 0.40);
     display: grid;
-    grid-template-columns: 1.48fr 1fr;
-    gap: 4.3rem;
-    padding: 3rem;
-    background: url(../img/calendar-widget-bg.png) no-repeat center;
-    background-size: 100% 100%;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 4rem;
+    border: 0.1rem solid;
+    border-radius: 0.5rem;
+    padding: 2.5rem;
 }
 
-h2 {
-    margin: 0 0 16px 0;
-    font-size: 19px;
-    font-weight: 700;
+.dates-vlog h3,
+.timeslots-vlog h3 {
+    color: var(--beige);
+    padding-bottom: 1.4rem;
 }
 
-/* ----- Calendar column ----- */
+
 #calendar-container {
-    background: #efe8db;
-    border-radius: 10px;
-    padding: 16px;
+    max-width: 40rem;
+    width: 100%;
+    height: 34.1rem;
+    background: var(--beige);
+    border-radius: 0.5rem;
+    padding: 1rem 1.6rem 2.2rem;
 }
 
-/* CalendarJS override styles to match design (real class names from the plugin's CSS) */
+
 #calendar-container .CalendarJS {
     font-family: inherit;
 }
 
-/* Header row: prev/next links + month title */
 #calendar-container .cjs-calHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 10px;
+    margin-bottom: 1.1rem;
 }
 
 #calendar-container .cjs-moTitle {
-    color: #5c211c;
-    font-weight: 700;
-    font-size: 16px;
+    font-family: var(--font-avenirnextltpro);
+    font-size: 2rem;
+    font-weight: 600;
+    color: var(--rust-brown);
     order: 1;
     flex: 1;
     text-align: left;
+    position: relative;
+}
+
+#calendar-container .cjs-moTitle::after {
+    position: absolute;
+    content: "";
+    background-image: url('../img/month-chevron.svg');
+    background-repeat: no-repeat;
+    width: 0.7rem;
+    height: 1.1rem;
+    left: 8rem;
+    top: 50%;
+    transform: translateY(-50%);
 }
 
 #calendar-container .cjs-lastLink,
@@ -2319,8 +2389,8 @@ h2 {
     border: none;
     color: #5c211c;
     font-weight: 700;
-    font-size: 15px;
-    padding: 2px 6px;
+    font-size: 1.5rem;
+    padding: 0.2rem 0.6rem;
     order: 2;
 }
 
@@ -2329,16 +2399,16 @@ h2 {
     color: #7a2f26;
 }
 
-/* Weekday header row (SUN, MON, ...) */
 #calendar-container .cjs-dayHeader {
+    font-family: var(--font-avenirnextltpro);
     background: transparent;
-    color: #5c211c;
+    color: var(--rust-brown);
+    font-size: 1.6rem;
     font-weight: 700;
-    font-size: 12px;
     text-transform: uppercase;
+    text-align: center;
 }
 
-/* Day cells */
 #calendar-container .cjs-dayCol {
     background: transparent;
     border: none !important;
@@ -2348,9 +2418,6 @@ h2 {
     background: transparent;
 }
 
-/* Dates with no available slots: shown but muted and non-interactive
-     (the plugin already omits the cjs-calDay class + click listener for
-     these, since they're passed in via the disabledDates option). */
 #calendar-container .cjs-blankday .cjs-dateLabel {
     color: rgba(107, 90, 74, 0.35);
     cursor: default;
@@ -2370,8 +2437,11 @@ h2 {
 }
 
 #calendar-container .cjs-dateLabel {
-    color: #6b5a4a;
-    font-size: 14px;
+    font-family: var(--font-avenirnextltpro);
+    font-size: 2rem;
+    font-weight: 400;
+    color: var(--light-brown);
+    text-align: center;
 }
 
 #calendar-container .cjs-calDay {
@@ -2379,45 +2449,42 @@ h2 {
     cursor: pointer;
 }
 
-/* Hover uses the same box (.cjs-dayCol) as the selected state below,
-     via :has(), so the hover circle is identical in width/height to the
-     selected circle instead of the smaller inner cjs-calDay box. */
 #calendar-container .cjs-dayCol:has(.cjs-calDay:hover) {
     background: #e2d8c4 !important;
     border-radius: 50%;
 }
 
-/* Selected day (cjs-active is added three levels up from the day cell) */
 #calendar-container .cjs-active {
     background: #5c211c !important;
     border-radius: 50%;
 }
 
 #calendar-container .cjs-active .cjs-dateLabel {
-    color: #fff;
+    color: var(--white);
 }
 
-/* ----- Timeslots column ----- */
-.timeslots-section h2 {
-    margin-bottom: 16px;
+.calendar_timeslots_vlog {
+    position: relative;
 }
 
 #timeslots {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 12px;
-    min-height: 48px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
 }
 
 .timeslot-btn {
-    background: #efe8db;
-    color: #5c211c;
-    border: none;
-    border-radius: 8px;
-    padding: 12px 20px;
-    font-size: 14px;
-    font-weight: 600;
+    font-family: var(--font-avenirnextltpro);
+    background: var(--beige);
+    font-size: 1.8rem;
+    font-weight: 300;
+    line-height: 1.55%;
+    color: var(--rust-brown);
+    border-radius: 0.5rem;
     cursor: pointer;
+    border: none;
+    outline: none;
+    padding: 2.5rem 1.3rem;
     transition: transform .15s ease, box-shadow .15s ease, background .15s ease;
 }
 
@@ -2428,40 +2495,44 @@ h2 {
 
 .timeslot-btn.selected {
     background: #7a2f26;
-    color: #fff;
-    box-shadow: 0 0 0 2px rgba(255, 255, 255, 0.4) inset;
+    color: var(--white);
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.4) inset;
 }
 
 .empty-state {
     color: rgba(243, 236, 224, 0.6);
-    font-size: 14px;
+    font-size: 1.4rem;
 }
 
-.contact {
-    margin-top: 36px;
+.calendar_timeslots_vlog .contact {
+    position: absolute;
+    bottom: 0.7rem;
 }
 
-.contact h3 {
-    font-size: 15px;
-    margin: 0 0 12px 0;
+.calendar_timeslots_vlog .contact h3 {
+    color: var(--beige);
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 140%;
+    padding-bottom: 1.4rem;
 }
 
-.contact a {
-    display: flex;
+.calendar_timeslots_vlog .contact a {
+    font-weight: 300;
+    line-height: 155%;
+    color: var(--beige);
+    font-size: 1.8rem;
+    display: inline-flex;
     align-items: center;
-    gap: 8px;
-    color: #f3ece0;
-    text-decoration: none;
-    font-size: 14px;
-    margin-bottom: 8px;
-    opacity: 0.9;
+    gap: 0.8rem;
+    cursor: pointer;
 }
 
-.contact a:hover {
-    opacity: 1;
-    text-decoration: underline;
+.calendar_timeslots_vlog .contact a img {
+    width: 2.1rem;
 }
 
-.contact svg {
-    flex-shrink: 0;
+.calendar_timeslots_vlog .contact a:not(:last-child) {
+    padding-bottom: 0.7rem;
 }

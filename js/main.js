@@ -148,87 +148,72 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+// ===================slider calendar====================
 
+function dateKey(date) {
+  const y = date.getFullYear();
+  const m = String(date.getMonth() + 1).padStart(2, "0");
+  const d = String(date.getDate()).padStart(2, "0");
+  return `${y}-${m}-${d}`;
+}
 
- // -----------------------------------------------------------------
-  // Sample data: which dates have slots available, and what they are.
-  // Replace this with data from your backend / API.
-  // Generated relative to today so the demo always has open dates,
-  // instead of a fixed month that eventually falls entirely in the past.
-  // -----------------------------------------------------------------
-  function dateKey(date){
-    const y = date.getFullYear();
-    const m = String(date.getMonth() + 1).padStart(2, "0");
-    const d = String(date.getDate()).padStart(2, "0");
-    return `${y}-${m}-${d}`;
+function addDays(date, days) {
+  const d = new Date(date);
+  d.setDate(d.getDate() + days);
+  return d;
+}
+
+const today = new Date();
+today.setHours(0, 0, 0, 0);
+
+const availableSlots = {
+  [dateKey(addDays(today, 9))]: ["09:00-09:30"],
+  [dateKey(addDays(today, 16))]: ["14:00-14:30", "16:00-16:30"]
+};
+
+const defaultTimeslots = ["09:00-09:30", "10:00-10:30"];
+
+const timeslotsEl = document.getElementById("timeslots");
+const emptyStateEl = document.getElementById("empty-state");
+
+function renderTimeslots(date) {
+  const key = dateKey(date);
+  const slots = availableSlots[key] || defaultTimeslots;
+
+  timeslotsEl.innerHTML = "";
+
+  if (!slots || slots.length === 0) {
+    const msg = document.createElement("div");
+    msg.className = "empty-state";
+    msg.textContent = "No timeslots available for this date.";
+    timeslotsEl.appendChild(msg);
+    return;
   }
 
-  function addDays(date, days){
-    const d = new Date(date);
-    d.setDate(d.getDate() + days);
-    return d;
-  }
-
-  const today = new Date();
-  today.setHours(0, 0, 0, 0);
-
-  // Per-date overrides go here (optional) — any date NOT listed falls back
-  // to defaultTimeslots below, so every date shows something when clicked.
-  const availableSlots = {
-    [dateKey(addDays(today, 9))]:  ["09:00-09:30"],
-    [dateKey(addDays(today, 16))]: ["14:00-14:30", "16:00-16:30"]
-  };
-
-  const defaultTimeslots = ["09:00-09:30", "10:00-10:30", "11:00-11:30", "14:00-14:30", "15:30-16:00"];
-
-  // Every date on the calendar is selectable, and every date shows
-  // timeslots — either its specific entry in availableSlots above, or
-  // defaultTimeslots as a fallback.
-
-  const timeslotsEl = document.getElementById("timeslots");
-  const emptyStateEl = document.getElementById("empty-state");
-
-  function renderTimeslots(date){
-    const key = dateKey(date);
-    const slots = availableSlots[key] || defaultTimeslots;
-
-    timeslotsEl.innerHTML = "";
-
-    if (!slots || slots.length === 0){
-      const msg = document.createElement("div");
-      msg.className = "empty-state";
-      msg.textContent = "No timeslots available for this date.";
-      timeslotsEl.appendChild(msg);
-      return;
-    }
-
-    slots.forEach(slot => {
-      const btn = document.createElement("button");
-      btn.className = "timeslot-btn";
-      btn.type = "button";
-      btn.textContent = slot;
-      btn.addEventListener("click", () => {
-        document.querySelectorAll(".timeslot-btn").forEach(b => b.classList.remove("selected"));
-        btn.classList.add("selected");
-        // Hook your booking logic here, e.g.:
-        // submitBooking(date, slot);
-      });
-      timeslotsEl.appendChild(btn);
+  slots.forEach(slot => {
+    const btn = document.createElement("button");
+    btn.className = "timeslot-btn";
+    btn.type = "button";
+    btn.textContent = slot;
+    btn.addEventListener("click", () => {
+      document.querySelectorAll(".timeslot-btn").forEach(b => b.classList.remove("selected"));
+      btn.classList.add("selected");
     });
-  }
-
-  // Initialize CalendarJS
-  const calendarEl = document.getElementById("calendar-container");
-  const cal = new calendar(calendarEl, {
-    year: today.getFullYear(),
-    month: today.getMonth() + 1, // plugin expects 1-indexed months
-    onDayClick: function(date){
-      cal.clearSelection();
-      cal.selectDate(date);
-      renderTimeslots(date);
-    },
-    onMonthChanged: function(){
-      timeslotsEl.innerHTML = "";
-      timeslotsEl.appendChild(emptyStateEl);
-    }
+    timeslotsEl.appendChild(btn);
   });
+}
+
+const calendarEl = document.getElementById("calendar-container");
+const cal = new calendar(calendarEl, {
+  year: today.getFullYear(),
+  month: today.getMonth() + 1,
+  onDayClick: function (date) {
+    cal.clearSelection();
+    cal.selectDate(date);
+    renderTimeslots(date);
+  },
+  onMonthChanged: function () {
+    timeslotsEl.innerHTML = "";
+    timeslotsEl.appendChild(emptyStateEl);
+  }
+});
