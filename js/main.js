@@ -69,6 +69,25 @@ swiper = new Swiper(".about_slider", {
 });
 
 
+document.addEventListener("DOMContentLoaded", function () {
+  const performanceTabs = document.querySelectorAll(".performance_tab");
+  const performancePanels = document.querySelectorAll(".performance_tab_content");
+
+  performanceTabs.forEach((tab) => {
+    tab.addEventListener("click", () => {
+      const target = tab.dataset.tab;
+      performanceTabs.forEach((item) => item.classList.remove("active"));
+      performancePanels.forEach((panel) => panel.classList.remove("active"));
+
+      tab.classList.add("active");
+      const panel = document.getElementById(target);
+      if (panel) {
+        panel.classList.add("active");
+      }
+    });
+  });
+});
+
 
 
 // ================ steps slider =====================

@@ -235,6 +235,54 @@
 
     /* =========Partner page end========== */
 
+
+    .home_area {
+        padding-top: 14rem;
+        padding-bottom: 48rem;
+    }
+    .home_area .container>img {
+        width: 86%;
+    }
+    .solution_area {
+        padding-top: 11rem;
+        padding-bottom: 8rem;
+    }
+    .how-it-works {
+        padding-top: 8rem;
+        padding-bottom: 4rem;
+    }
+    .why-it-matters .section_title {
+        margin-bottom: 5rem;
+    }
+    .table_card{
+        width: 100%;
+    }
+    .performance_table_wrap{
+        overflow: auto;
+        width: 100%;
+    }
+    .performance_table{
+        min-width: 110rem;
+    }
+    .expected_area {
+        margin-top: 5rem;
+    }
+    .expected_inner_area {
+        padding: 5rem 0;
+    }
+    .expected_area>img {
+        width: 230vw;
+        left: 50%;
+        transform: translateY(-50%) translateX(-50%);
+        max-width: 230vw;
+    }
+    .performance_table tbody td {
+        line-height: 1.35;
+    }
+    .performance_tab_content {
+        min-height: 64rem;
+    }
+
 }
 
 
@@ -535,6 +583,13 @@
 
     /* =========Partner page end========== */
 
+    .home_area .container>img {
+        width: 105%;
+    }
+    .performance_side_card{
+        width: 100%;
+    }
+
 }
 
 
@@ -544,5 +599,30 @@
     html {
         font-size: 2.415vw;
     }
-
+    .home_area {
+        padding-top: 12rem;
+        padding-bottom: 35rem;
+    }
+    .performance_tab {
+        min-width: 11.5rem;
+    }
+    .text_md {
+        font-size: 1.7rem;
+    }
+    .performance_area>img {
+        bottom: -10.5rem;
+    }
+    .performance_tab_content>img {
+        bottom: -8rem;
+    }
+    .table_card {
+        padding: 1.5rem;
+    }
+    .performance_area .section_title {
+        margin-bottom: 5rem;
+    }
+    .performance_area {
+        padding-top: 10rem;
+        margin-bottom: 12rem;
+    }
 }
