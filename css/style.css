@@ -1,7 +1,5 @@
-/*=========================== Google fonts =============================*/
+/* Google fonts */
 @import url('https://fonts.googleapis.com/css2?family=Architects+Daughter&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
-
-/*=========================== Web fonts =============================*/
 
 @font-face {
     font-family: 'AvenirNextLTPro';
@@ -837,6 +835,7 @@ h6 {
     bottom: 0;
     transform: translateY(45%);
     pointer-events: none;
+    width: 100%;
 }
 
 .home_area .container>img {
@@ -934,9 +933,162 @@ h6 {
     margin-bottom: 3rem;
 }
 
+.how_it_works_slider{
+    position: relative;
+    margin-top: 6.5rem;
+}
+.timeline {
+    width: min(52.6rem, 100%);
+    position: absolute;
+    top: 60rem;
+    left: 50%;
+    transform: translateX(-50%);
+}
+.timeline-track {
+    position: relative;
+    height: 1.2rem;
+    background: var(--beige);
+    border-radius: 99rem;
+}
+.timeline-fill {
+    position: absolute;
+    inset: 0 auto 0 0;
+    width: 0;
+    background: var(--rust-brown);
+    border-radius: inherit;
+    z-index: 1;
+}
+.timeline-steps {
+    position: absolute;
+    inset: 50% 0 auto;
+    transform: translateY(-50%);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 2;
+}
+.timeline-step {
+    width: 2.9rem;
+    height: 2.9rem;
+    border-radius: 50%;
+    background: var(--beige);
+    transition: .3s;
+    box-shadow: 0 .2rem .2rem rgba(0, 0, 0, 0.4);
+}
+.timeline-step:nth-child(even){
+    scale: 0.75;
+}
+.timeline-step.active {
+    border-color: var(--rust-brown);
+    background: #fff;
+}
+.timeline-step.completed {
+    background: var(--rust-brown);
+    border-color: var(--rust-brown);
+}
+.timeline-handle {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translate(-50%, -50%);
+    width: 5.4rem;
+    height: 5.4rem;
+    border: 0;
+    border-radius: 50%;
+    color: #fff;
+    cursor: grab;
+    z-index: 3;
+    filter: drop-shadow(0 .2rem .2rem rgba(0, 0, 0, 0.4));
+}
+.timeline-handle img{
+    width: 100%;
+}
+.timeline-handle img:last-child{
+    display: none;
+}
+.timeline-handle.finished img:first-child{
+    display: none;
+}
+.timeline-handle.finished img:last-child{
+    display: block;
+}
+
+/* screen css */
+.scene_wrapper{
+    background-size: cover;
+    background-position: bottom center;
+    min-height: 69.4rem;
+}
+.scene_item{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-block: 12rem;
+    opacity: 0;
+}
+.bottom_soil{
+    width: 100%;
+    display: block;
+}
+.toggle_box{
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+.toggle_icon{
+    border: none;
+    background-color: transparent;
+    width: 6.8rem;
+    padding: 0;
+}
+.toggle_icon img{
+    width: 100%;
+    filter: drop-shadow(0 .4rem .4rem rgba(0, 0, 0, 0.25));
+    border-radius: 50%;
+}
+.toggle_icon img:last-child{
+    display: none;
+}
+.toggle_content{
+    background-color: var(--beige);
+    color: var(--rust-brown);
+    box-shadow: 0 .4rem .4rem rgba(0, 0, 0, 0.25);
+    border-radius: .5rem;
+    padding: 4rem;
+    margin-top: -3rem;
+    opacity: 0;
+    visibility: hidden;
+}
+.toggle_content strong{
+    font-weight: 700;
+}
+.toggle_box.active .toggle_icon img:first-child{
+    display: none;
+}
+.toggle_box.active .toggle_icon img:last-child{
+    display: block;
+    box-shadow:  0 0 0 0.8rem rgba(148, 65, 49, 0.4);
+}
+.toggle_box.active .toggle_content{
+    opacity: 1;
+    visibility: visible;
+}
+.scene_item .text_md{
+    max-width: 25rem;
+    margin-top: 13rem;
+}
+body.popup-open .scene_item .text_md{
+    opacity: 0.5;
+}
+
+
+
+
 /* why it matters area */
 .why-it-matters {
-    padding-top: 20rem;
+    padding-top: 5rem;
     position: relative;
     z-index: 2;
 }
@@ -2099,7 +2251,7 @@ h6 {
     height: auto !important;
 }
 
-.contact_calendar #calendar-container {
+.contact_calendar .calendar-container {
     height: auto !important;
 }
 
@@ -2423,12 +2575,13 @@ h6 {
     position: absolute;
     top: 50%;
     z-index: 111;
+    left: calc((100% - 1260px) / 2 + 15px);
 }
 
 .swiper_button_group .step_next {
     position: absolute;
     top: 50%;
-    right: 32rem;
+    right: calc((100% - 1260px) / 2 + 15px);
     z-index: 111;
 }
 
@@ -2441,14 +2594,18 @@ h6 {
 
 .steps_slider__progress {
     position: relative;
+    filter: drop-shadow(.0rem .4rem .4rem rgba(0, 0, 0, 0.25));
 }
 
 .steps_slider__progress-track {
     position: relative;
     height: 1.2rem;
     background: var(--beige);
+    border-radius: 2rem;
 }
-
+.is-active{
+    box-shadow: 0 0 0 0.8rem rgba(148, 65, 49, 0.4);
+}
 .steps_slider__progress-fill {
     position: absolute;
     top: 0;
@@ -2509,7 +2666,7 @@ h6 {
 }
 
 
-#calendar-container {
+.calendar-container {
     max-width: 40rem;
     width: 100%;
     height: 34.1rem;
@@ -2519,18 +2676,18 @@ h6 {
 }
 
 
-#calendar-container .CalendarJS {
+.calendar-container .CalendarJS {
     font-family: inherit;
 }
 
-#calendar-container .cjs-calHeader {
+.calendar-container .cjs-calHeader {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1.1rem;
 }
 
-#calendar-container .cjs-moTitle {
+.calendar-container .cjs-moTitle {
     font-family: var(--font-avenirnextltpro);
     font-size: 2rem;
     font-weight: 600;
@@ -2541,7 +2698,7 @@ h6 {
     position: relative;
 }
 
-#calendar-container .cjs-moTitle::after {
+.calendar-container .cjs-moTitle::after {
     position: absolute;
     content: "";
     background-image: url('../img/month-chevron.svg');
@@ -2553,8 +2710,8 @@ h6 {
     transform: translateY(-50%);
 }
 
-#calendar-container .cjs-lastLink,
-#calendar-container .cjs-nextLink {
+.calendar-container .cjs-lastLink,
+.calendar-container .cjs-nextLink {
     background: transparent;
     border: none;
     color: #5c211c;
@@ -2564,12 +2721,12 @@ h6 {
     order: 2;
 }
 
-#calendar-container .cjs-lastLink:hover,
-#calendar-container .cjs-nextLink:hover {
+.calendar-container .cjs-lastLink:hover,
+.calendar-container .cjs-nextLink:hover {
     color: #7a2f26;
 }
 
-#calendar-container .cjs-dayHeader {
+.calendar-container .cjs-dayHeader {
     font-family: var(--font-avenirnextltpro);
     background: transparent;
     color: var(--rust-brown);
@@ -2579,34 +2736,34 @@ h6 {
     text-align: center;
 }
 
-#calendar-container .cjs-dayCol {
+.calendar-container .cjs-dayCol {
     background: transparent;
     border: none !important;
 }
 
-#calendar-container .cjs-blankday {
+.calendar-container .cjs-blankday {
     background: transparent;
 }
 
-#calendar-container .cjs-blankday .cjs-dateLabel {
+.calendar-container .cjs-blankday .cjs-dateLabel {
     color: rgba(107, 90, 74, 0.35);
     cursor: default;
 }
 
-#calendar-container .cjs-dayTable {
+.calendar-container .cjs-dayTable {
     display: flex;
     align-items: center;
     justify-content: center;
 }
 
-#calendar-container .cjs-dayCell {
+.calendar-container .cjs-dayCell {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 100%;
 }
 
-#calendar-container .cjs-dateLabel {
+.calendar-container .cjs-dateLabel {
     font-family: var(--font-avenirnextltpro);
     font-size: 2rem;
     font-weight: 400;
@@ -2614,22 +2771,22 @@ h6 {
     text-align: center;
 }
 
-#calendar-container .cjs-calDay {
+.calendar-container .cjs-calDay {
     border-radius: 50%;
     cursor: pointer;
 }
 
-#calendar-container .cjs-dayCol:has(.cjs-calDay:hover) {
+.calendar-container .cjs-dayCol:has(.cjs-calDay:hover) {
     background: #e2d8c4 !important;
     border-radius: 50%;
 }
 
-#calendar-container .cjs-active {
+.calendar-container .cjs-active {
     background: #5c211c !important;
     border-radius: 50%;
 }
 
-#calendar-container .cjs-active .cjs-dateLabel {
+.calendar-container .cjs-active .cjs-dateLabel {
     color: var(--white);
 }
 
@@ -2705,4 +2862,22 @@ h6 {
 
 .calendar_timeslots_vlog .contact a:not(:last-child) {
     padding-bottom: 0.7rem;
+}
+
+.step_slider_inner_section.v2{
+    padding-bottom: 0;
+    border-bottom: none;
+    border-top: none;
+    background-color: transparent;
+    padding-top: 15rem;
+}
+.step_slider_inner_section.v2 .step_title .title_md{
+    margin-top: 3rem;
+    padding-bottom: 5rem;
+}
+.step_slider_inner_section.v2 .step_title img{
+    padding-bottom: 0;
+    margin-bottom: -2.5rem;
+    position: relative;
+    z-index: 2;
 }
