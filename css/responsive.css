@@ -56,6 +56,9 @@
     .swiper_button_group .step_next {
         right: calc((100% - 960px) / 2 + 15px);
     }
+    .emptyBag {
+        left: calc(72% - 12rem);
+    }
 
 }
 
@@ -367,6 +370,35 @@
     }
     .step_slider_inner_section.v2 .back_btn{
         margin-bottom: 2rem;
+    }
+
+    .scene_item .text_md {
+        max-width: 40rem;
+        margin-top: 0rem;
+        text-align: center;
+        margin-inline: auto;
+        margin-bottom: 4rem;
+    }
+    .scene_item {
+        padding-block: 7rem;
+    }
+    .toggle_content {
+        padding: 4rem 2rem 2rem;
+    }
+    .timeline {
+        top: 62rem;
+    }
+    .nutri {
+        left: calc(27% - 10rem);
+        top: 27rem;
+    }
+    .emptyBag {
+        left: calc(60% - 12rem);
+        top: 15rem;
+    }
+    .bag {
+        left: calc(35% - 8rem);
+        top: 19rem;
     }
 }
 
@@ -722,5 +754,16 @@
     }
     .steps_slider__media img {
         height: 32rem;
+    }
+    .timeline {
+        width: min(36.6rem, 100%);
+    }
+    .timeline-step {
+        width: 2.5rem;
+        height: 2.5rem;
+    }
+    .timeline-handle {
+        width: 4.4rem;
+        height: 4.4rem;
     }
 }

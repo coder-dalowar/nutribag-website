@@ -97,15 +97,18 @@ const track = document.querySelector(".timeline-track");
 const fill = document.querySelector(".timeline-fill");
 const handle = document.querySelector(".timeline-handle");
 const steps = document.querySelectorAll(".timeline-step");
-if(steps){
+if (steps) {
   /*----------------------------------
   Config
   -----------------------------------*/
-  const totalSteps = 7;
+  const totalSteps = 8;
   const maxIndex = totalSteps - 1;
   /*----------------------------------
   Master Timeline
   -----------------------------------*/
+  gsap.set(".item2, .item3, .item4, .item5, .item6, .item7, .item8", { autoAlpha: 0 });
+  gsap.set(".item1", { autoAlpha: 1 });
+
   const master = gsap.timeline({
     paused: true,
     defaults: {
@@ -114,97 +117,77 @@ if(steps){
     }
   });
 
-  /*----------------------------------
-  Scene 1
-  -----------------------------------*/
+master
+  .to(".item1", { autoAlpha: 0 }, 0)
+  .to(".item2", { autoAlpha: 1 }, 0)
+  .to(".nutri", {
+    yPercent: -120,
+    xPercent: 50
+  }, 0)
 
-  master
-    .from(".item1", {
-      autoAlpha: 1
-    }, 0)
+  .to(".emptyBag", {
+    yPercent: 15,
+    xPercent: -65,
+    rotation: 10
+  }, 0);
 
-    .from(".bag", {
-      scale: .6,
-      autoAlpha: 0
-    }, 0);
+// Between Step 0 and Step 1 (50%)
+master
+  .to(".item1", { autoAlpha: 0 }, 1)
+  .to(".item2", { autoAlpha: 1 }, 1)
 
+  .to(".nutri", {
+    yPercent: 20,
+    autoAlpha: 0
+  }, 1)
 
-  /*----------------------------------
-  Scene 2
-  -----------------------------------*/
+  .to(".emptyBag", {
+    autoAlpha: 0
+  }, 1)
 
-  master
-    .to(".bag", {
-      x: 200,
-      rotation: -12
-    }, 1)
-    .to(".item2", {
-      autoAlpha: 1
-    }, 1)
-    .to(".popup-1", {
-      autoAlpha: 1,
-      y: 0
-    }, 1);
+  .to(".bag", {
+    autoAlpha: 1
+  }, 1);
 
+// Between Step 1 and Step 2
+master
+  .to(".item2", { autoAlpha: 0 }, 2)
+  .to(".item3", { autoAlpha: 1 }, 2)
+  .to(".bag", { rotation: 15, scale: .85 }, 2);
 
-  /*----------------------------------
-  Scene 3
-  -----------------------------------*/
+// Between Step 2 and Step 3
+master
+  .to(".item3", { autoAlpha: 0 }, 3)
+  .to(".item4", { autoAlpha: 1 }, 3)
+  .to(".bg2", { autoAlpha: 1, }, 3)
+  .to(".bag", { xPercent:-30, scale: .45 }, 3);
 
-  master
-    .to(".bag", {
-      y: -60,
-      scale: .9
-    }, 2)
+// Between Step 3 and Step 4
+master
+  .to(".item4", { autoAlpha: 0 }, 4)
+  .to(".item5", { autoAlpha: 1 }, 4)
+  .to(".bag", { scale: .35 }, 4);
 
-    .to(".plant", {
-      autoAlpha: 1,
-      scale: 1
-    }, 2);
+// Between Step 4 and Step 5
+master
+  .to(".item5", { autoAlpha: 0 }, 5)
+  .to(".item6", { autoAlpha: 1 }, 5)
+  .to(".bg2", { autoAlpha: 0, }, 5)
+  .to(".bg3", { autoAlpha: 1, }, 5);
 
+// Between Step 5 and Step 6
+master
+  .to(".item6", { autoAlpha: 0 }, 6)
+  .to(".item7", { autoAlpha: 1 }, 6)
+  .to(".bag", { autoAlpha: 0, }, 6)
+  .to(".bg3", { autoAlpha: 0, }, 6)
+  .to(".bg4", { autoAlpha: 1, }, 6);
 
-  /*----------------------------------
-  Scene 4
-  -----------------------------------*/
-
-  master
-    .to(".roots", {
-      autoAlpha: 1,
-      scale: 1
-    }, 3);
-
-
-  /*----------------------------------
-  Scene 5
-  -----------------------------------*/
-
-  master
-    .to(".popup-2", {
-      autoAlpha: 1,
-      y: 0
-    }, 4);
-
-
-  /*----------------------------------
-  Scene 6
-  -----------------------------------*/
-
-  master
-    .to(".bag", {
-      x: 380,
-      rotation: 8
-    }, 5);
-
-
-  /*----------------------------------
-  Scene 7
-  -----------------------------------*/
-
-  master
-    .to(".finish", {
-      autoAlpha: 1,
-      y: 0
-    }, 6);
+master
+  .to(".item7", { autoAlpha: 0 }, 7)
+  .to(".item8", { autoAlpha: 1 }, 7)
+  .to(".bg4", { autoAlpha: 0, }, 7)
+  .to(".bg5", { autoAlpha: 1, }, 7);
 
 
   /*----------------------------------
